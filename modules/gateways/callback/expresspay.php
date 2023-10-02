@@ -82,7 +82,7 @@ function notify_success($dataJSON)
         $invoiceNo  = $data['InvoiceNo'];
         $cmdtype    = $data['CmdType'];
         $status     = $data['Status'];
-        $amount     = $data['Amount'];
+        $amount     = str_replace(',','.', $data['Amount']);
 
         switch ($cmdtype) {
             case 1:
